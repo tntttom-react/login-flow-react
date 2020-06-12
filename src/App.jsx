@@ -1,15 +1,16 @@
 import React from "react";
 
 import LoginForm from "./Components/LoginForm";
+import WelcomeForm from "./Components/WelcomeForm";
 
-var isUserRegistered = false;
-var isLoggedIn = false;
+var isUserRegistered = true;
+var isLoggedIn = true;
 
 function App() {
   return (
     <div className="container">
       {isLoggedIn ? (
-        <h1>Hello!</h1>
+        <WelcomeForm />
       ) : (
         <LoginForm isRegistered={isUserRegistered} />
       )}
